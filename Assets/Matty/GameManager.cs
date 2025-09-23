@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
 
 
     [ContextMenu("right?")]
-    void SwipeRight()
+    public void SwipeRight()
     {
         if (QuestionList[CurrentQuestionIndex].isTrueOrfalse)
         {
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
 
 
     [ContextMenu("left?")]
-    void SwipeLeft()
+    public void SwipeLeft()
     {
         if (QuestionList[CurrentQuestionIndex].isTrueOrfalse)
         {

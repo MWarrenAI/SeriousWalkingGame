@@ -7,8 +7,15 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class InputControl : MonoBehaviour
 {
+    //Matt's Game Manager
+    /// <summary>
+    /// Used to call
+    /// </summary>
+    [SerializeField]
+    GameManager m_GameManager;
+
     float m_ScreenSegment;
-    private const int c_ScreenDivisionCount = 4;
+    private const int c_ScreenDivisionCount = 6;
     private Vector2 m_PressStartPosition;
     private bool m_IsHoldingPress;
     [SerializeField] GameObject m_QuestionObject;
@@ -130,11 +137,21 @@ public class InputControl : MonoBehaviour
     {
         Debug.Log("Swiped Right");
         ResetQuestionBoxPosition();
+
+        if (m_GameManager != null)
+        {
+            m_GameManager.SwipeRight();
+        }
     }
 
     void OnLeftSwipe()
     {
         Debug.Log("Swiped Left");
         ResetQuestionBoxPosition();
+
+        if(m_GameManager != null)
+        {
+            m_GameManager.SwipeLeft();
+        }
     }
 }

@@ -943,14 +943,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1075534046}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 3
+        m_MethodName: MoveToSceneSubject
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: sci
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1075534044
@@ -1003,6 +1003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc27354770d4bb748b35a529d99df21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: 0
 --- !u!1 &1367529696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,14 +1277,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1551391277}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 3
+        m_MethodName: MoveToSceneSubject
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: compsci
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1551391275
@@ -1336,6 +1337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc27354770d4bb748b35a529d99df21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: 0
 --- !u!1 &1662060897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,14 +1502,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1794005869}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 3
+        m_MethodName: MoveToSceneSubject
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: maths
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1794005867
@@ -1560,6 +1562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc27354770d4bb748b35a529d99df21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: 0
 --- !u!1 &1814594661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,14 +1922,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1923033815}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 3
+        m_MethodName: MoveToSceneSubject
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: english
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1923033813
@@ -1979,6 +1982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc27354770d4bb748b35a529d99df21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: 0
 --- !u!1 &1965538262
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,14 +2494,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2081792424}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: MoveToScene
-        m_Mode: 3
+        m_MethodName: MoveToSceneSubject
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 6
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: history
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2081792422
@@ -2550,6 +2554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc27354770d4bb748b35a529d99df21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: 0
 --- !u!1 &2136019919
 GameObject:
   m_ObjectHideFlags: 0

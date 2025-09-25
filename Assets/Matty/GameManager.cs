@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
@@ -13,9 +14,9 @@ public class GameManager : MonoBehaviour
     {
         public string Text;
         public bool isTrueOrfalse;
-        public string AnswerA;
-        public string AnswerB;
-        public string A;
+        public string left;
+        public string right;
+        public string Answer;
         public bool IsCorrect;
     }
     public string Name = "Player";
@@ -44,6 +45,9 @@ public class GameManager : MonoBehaviour
     public GameObject WinScoreObject;
     public TMP_Text WinScoreText;
 
+    public Image flashImage;
+    public int fukcyou;
+
     void Start()
     {
         M_TextObjectText = TextObject.GetComponent<TMP_Text>();
@@ -66,9 +70,9 @@ public class GameManager : MonoBehaviour
                 {
                     QuestionList[i].Text = parts[0];
                     QuestionList[i].isTrueOrfalse = false;
-                    QuestionList[i].AnswerA = parts[1];
-                    QuestionList[i].AnswerB = parts[2];
-                    QuestionList[i].A = parts[3];
+                    QuestionList[i].left = parts[1];
+                    QuestionList[i].right = parts[2];
+                    QuestionList[i].Answer = parts[3];
                 }
                 else
                 {
@@ -96,8 +100,8 @@ public class GameManager : MonoBehaviour
         M_TextObjectText.text = QuestionList[CurrentQuestionIndex].Text;
         if (!QuestionList[CurrentQuestionIndex].isTrueOrfalse)
         {
-            LeftText.text = QuestionList[CurrentQuestionIndex].AnswerA;
-            RightText.text = QuestionList[CurrentQuestionIndex].AnswerB;
+            LeftText.text = QuestionList[CurrentQuestionIndex].left;
+            RightText.text = QuestionList[CurrentQuestionIndex].right;
         }
         else
         {
@@ -124,7 +128,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (QuestionList[CurrentQuestionIndex].A == QuestionList[CurrentQuestionIndex].AnswerB)
+            if (QuestionList[CurrentQuestionIndex].Answer == QuestionList[CurrentQuestionIndex].right)
             {
                 AnswerRight();
             }
@@ -153,7 +157,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if (QuestionList[CurrentQuestionIndex].A == QuestionList[CurrentQuestionIndex].AnswerA)
+            if (QuestionList[CurrentQuestionIndex].Answer == QuestionList[CurrentQuestionIndex].left)
             {
                 AnswerRight();
             }
@@ -168,13 +172,13 @@ public class GameManager : MonoBehaviour
     void AnswerRight()
     {
         Score++;
-        M_TextObjectText.color = Color.green;
+        //M_TextObjectText.color = Color.green;
         removeQuestion();
     }
 
     void AnswerWrong()
     {
-        M_TextObjectText.color = Color.red;
+        //M_TextObjectText.color = Color.red;
         removeQuestion();
     }
 
@@ -197,5 +201,28 @@ public class GameManager : MonoBehaviour
         WinScren.SetActive(true);
         WinScoreText = WinScoreObject.GetComponent<TMP_Text>();
         WinScoreText.text = "You Scored " + Score + " out of " + totalQuestions;
+    }
+
+    public IEnumerator FlashGreenWithFade()
+    {
+        flashImage.gameObject.SetActive(true);
+        flashImage.color = new Color(0f, 1f, 0f, 0.5f);
+
+        yield return new WaitForSeconds(0.1f);
+
+        // Fade out over 0.15 seconds
+        float fadeTime = 0.15f;
+        float elapsedTime = 0f;
+        Color startColor = flashImage.color;
+
+        while (elapsedTime < fadeTime)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(startColor.a, 0f, elapsedTime / fadeTime);
+            flashImage.color = new Color(0f, 1f, 0f, alpha);
+            yield return null;
+        }
+
+        flashImage.gameObject.SetActive(false);
     }
 }

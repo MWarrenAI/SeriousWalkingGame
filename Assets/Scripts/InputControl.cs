@@ -101,7 +101,7 @@ public class InputControl : MonoBehaviour
         if (m_ActiveTouch != null)
         {
             m_PressStartPosition = m_ActiveTouch.Value.screenPosition;
-            Debug.Log("ON PRESS : " + m_PressStartPosition);
+            //Debug.Log("ON PRESS : " + m_PressStartPosition);
             m_IsHoldingPress = true;
         }
     }
@@ -112,8 +112,8 @@ public class InputControl : MonoBehaviour
         {
             Vector2 endPosition = m_ActiveTouch.Value.screenPosition;
             Vector2 delta = endPosition - m_PressStartPosition;
-            Debug.Log("ON RELEASE : " + endPosition);
-            Debug.Log("Mouse Delta: " + delta);
+            //Debug.Log("ON RELEASE : " + endPosition);
+            //Debug.Log("Mouse Delta: " + delta);
             m_PressStartPosition = Vector2.zero;
             m_IsHoldingPress = false;
             m_ActiveTouch = null;
@@ -135,7 +135,7 @@ public class InputControl : MonoBehaviour
 
     void OnRightSwipe()
     {
-        Debug.Log("Swiped Right");
+        //Debug.Log("Swiped Right");
         ResetQuestionBoxPosition();
 
         if (m_GameManager != null)
@@ -146,7 +146,7 @@ public class InputControl : MonoBehaviour
 
     void OnLeftSwipe()
     {
-        Debug.Log("Swiped Left");
+        //Debug.Log("Swiped Left");
         ResetQuestionBoxPosition();
 
         if(m_GameManager != null)

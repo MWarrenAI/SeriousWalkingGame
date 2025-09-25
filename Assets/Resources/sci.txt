@@ -1,0 +1,20 @@
+﻿Water boils at 100°C at sea level,False,True,True
+Lightning never strikes the same place twice,False,True,False
+Humans only use 10% of their brains,False,True,False
+Sound travels faster than light,False,True,False
+The mitochondria is the powerhouse of the cell,False,True,True
+Goldfish have a 3-second memory,False,True,False
+Electrons are larger than protons,False,True,False
+Plants produce oxygen during photosynthesis,False,True,True
+Gravity on the Moon is about 1/6th of Earth's gravity,False,True,True
+Antibiotics are effective against viral infections,False,True,False
+Water is made up of two hydrogen atoms and one oxygen atom,False,True,True
+The human body has 206 bones,False,True,True
+Cold weather can give you a cold,False,True,False
+Diamond is the hardest natural substance,False,True,True
+Evolution is "just a theory" meaning it's unproven,False,True,False
+Acids have a pH greater than 7,False,True,False
+The closest star to Earth is the Sun,False,True,True
+Blood in your veins is blue before it touches oxygen,False,True,False
+Vaccines cause autism,False,True,False
+Energy cannot be created or destroyed only transformed,False,True,True

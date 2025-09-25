@@ -51,24 +51,26 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         string sub = PlayerPrefs.GetString("subject");
+        Debug.Log(sub);
         switch (sub) 
         {
             case "maths":
-                FileLocation = $"Resources/maths.csv";
+                FileLocation = $"maths";
                 break;
             case "compsci":
-                FileLocation = $"Resources/compsci.csv";
+                FileLocation = $"compsci";
                 break;
             case "sci":
-                FileLocation = $"Resources/sci.csv";
+                FileLocation = $"sci";
                 break;
             case "english":
-                FileLocation = $"Resources/english.csv";
+                FileLocation = $"english";
                 break;
             case "history":
-                FileLocation = $"Resources/history.csv";
+                FileLocation = $"history";
                 break;
         }
+        Debug.Log(FileLocation);
         M_TextObjectText = TextObject.GetComponent<TMP_Text>();
         RightText = RightObject.GetComponent<TMP_Text>();
         LeftText = LeftObject.GetComponent<TMP_Text>();
@@ -76,11 +78,12 @@ public class GameManager : MonoBehaviour
         WinScoreText = WinScoreObject.GetComponent<TMP_Text>();
         M_TextObjectText.text = "Hello " + Name + "!";
 
-
-        string filePath = Application.dataPath + FileLocation;
-        if (File.Exists(filePath))
+        TextAsset levelData = Resources.Load<TextAsset>(FileLocation);
+        Debug.Log(levelData.text);
+        string filePath = levelData.text;
+        if (levelData != null)
         {
-            string[] lines = File.ReadAllLines(filePath);
+            string[] lines = levelData.text.Split(new[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
             QuestionList = new Question[lines.Length];
             for (int i = 0; i < lines.Length && i < QuestionList.Length; i++)
             {

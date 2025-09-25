@@ -1,0 +1,20 @@
+A sonnet has 14 lines,False,True,True
+Shakespeare wrote exactly 37 plays,False,True,True
+The plural of "mouse" is "mouses",False,True,False
+A metaphor uses "like" or "as" to make comparisons,False,True,False
+"To Kill a Mockingbird" was written by Harper Lee,False,True,True
+An oxymoron combines contradictory terms,False,True,True
+The past tense of "lie" (to recline) is "layed",False,True,False
+Alliteration is the repetition of consonant sounds at the beginning of words,False,True,True
+"Romeo and Juliet" is a comedy,False,True,False
+A haiku has 5-7-5 syllable structure,False,True,True
+"Your" and "you're" can be used interchangeably,False,True,False
+The protagonist is always the hero of the story,False,True,False
+Onomatopoeia refers to words that imitate sounds,False,True,True
+"Pride and Prejudice" was written by Jane Austen,False,True,True
+A thesis statement should appear in the conclusion,False,True,False
+"Effect" is always a noun and "affect" is always a verb,False,True,False
+Irony is when something is funny or coincidental,False,True,False
+"1984" was written by George Orwell,False,True,True
+A run-on sentence contains too many commas,False,True,False
+The Oxford comma is always required in formal writing,False,True,False

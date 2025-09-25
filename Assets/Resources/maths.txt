@@ -1,0 +1,20 @@
+﻿The square root of 16 is 4,False,True,True
+A negative number multiplied by a negative number gives a positive result,False,True,True
+The slope of a horizontal line is undefined,False,True,False
+Pi is exactly equal to 22/7,False,True,False
+The sum of angles in any triangle is 180 degrees,False,True,True
+Zero divided by any non-zero number equals zero,False,True,True
+The quadratic formula can solve any quadratic equation,False,True,True
+A parallelogram always has four right angles,False,True,False
+The graph of y = x² is a straight line,False,True,False
+|-5| equals -5,False,True,False
+The y-intercept occurs where x = 0,False,True,True
+All squares are rectangles,False,True,True
+The domain of f(x) = 1/x includes zero,False,True,False
+Sin(90°) = 1,False,True,True
+A prime number has exactly two factors,False,True,True
+The area of a circle with radius 3 is 6π,False,True,False
+Log₁₀(100) = 2,False,True,True
+The inverse of multiplication is subtraction,False,True,False
+An isosceles triangle has three equal sides,False,True,False
+The greatest common factor of 12 and 18 is 6,False,True,True

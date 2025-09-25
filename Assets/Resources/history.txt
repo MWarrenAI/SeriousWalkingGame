@@ -1,0 +1,20 @@
+World War I began in 1914,False,True,True
+The Great Wall of China is visible from space,False,True,False
+Napoleon Bonaparte was short for his time period,False,True,False
+The American Civil War ended in 1865,False,True,True
+Vikings wore horned helmets,False,True,False
+The Boston Tea Party happened in Boston Harbor,False,True,True
+Adolf Hitler was elected as Chancellor of Germany,False,True,True
+The Titanic sank in 1912,False,True,True
+Christopher Columbus discovered America in 1492,False,True,False
+The Berlin Wall fell in 1989,False,True,True
+Ancient Egyptians built the pyramids using slave labor,False,True,False
+The Declaration of Independence was signed in 1776,False,True,True
+World War II ended in 1945,False,True,True
+The Black Death killed about one-third of Europe's population,False,True,True
+George Washington had wooden teeth,False,True,False
+The Renaissance began in Italy,False,True,True
+The Cold War was an actual military conflict,False,True,False
+Cleopatra was Egyptian,False,True,False
+The American Revolution began with the Boston Massacre,False,True,False
+Julius Caesar was the first Roman Emperor,False,True,False

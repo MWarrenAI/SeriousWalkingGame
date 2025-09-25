@@ -40,7 +40,8 @@ public class GameManager : MonoBehaviour
 
     public List<int> questionLeft;
 
-
+    public GameObject QuestionSquare;
+    public GameObject BGPanel;
     public GameObject WinScren;
     public GameObject WinScoreObject;
     public TMP_Text WinScoreText;
@@ -87,7 +88,8 @@ public class GameManager : MonoBehaviour
             QuestionList = new Question[lines.Length];
             for (int i = 0; i < lines.Length && i < QuestionList.Length; i++)
             {
-                string[] parts = lines[i].Split(',');
+                string line = lines[i].Replace("\r", "");
+                string[] parts = line.Split(',');
                 if (parts.Length >= 3)
                 {
                     QuestionList[i].Text = parts[0];
@@ -104,6 +106,7 @@ public class GameManager : MonoBehaviour
                 }
             }
             totalQuestions = QuestionList.Length;
+
         }
         else
         {
@@ -159,7 +162,7 @@ public class GameManager : MonoBehaviour
                 AnswerWrong();
             }
         }
-        CurrentQuestionIndex = (CurrentQuestionIndex + 1) % QuestionList.Length;
+        //CurrentQuestionIndex = (CurrentQuestionIndex + 1) % QuestionList.Length;
     }
 
 
@@ -188,7 +191,7 @@ public class GameManager : MonoBehaviour
                 AnswerWrong();
             }
         }
-        CurrentQuestionIndex = (CurrentQuestionIndex + 1) % QuestionList.Length;
+        //CurrentQuestionIndex = (CurrentQuestionIndex + 1) % QuestionList.Length;
     }
 
     void AnswerRight()
@@ -196,12 +199,15 @@ public class GameManager : MonoBehaviour
         Score++;
         //M_TextObjectText.color = Color.green;
         removeQuestion();
+        StartCoroutine(FlashGreenWithFade());
     }
 
     void AnswerWrong()
     {
         //M_TextObjectText.color = Color.red;
         removeQuestion();
+        StartCoroutine(FlashRedWithFade());
+
     }
 
     void removeQuestion()
@@ -220,6 +226,8 @@ public class GameManager : MonoBehaviour
 
     void WinGame()
     {
+        QuestionSquare.SetActive(false);
+        BGPanel.SetActive(false);
         WinScren.SetActive(true);
         WinScoreText = WinScoreObject.GetComponent<TMP_Text>();
         WinScoreText.text = "You Scored " + Score + " out of " + totalQuestions;
@@ -229,6 +237,28 @@ public class GameManager : MonoBehaviour
     {
         flashImage.gameObject.SetActive(true);
         flashImage.color = new Color(0f, 1f, 0f, 0.5f);
+
+        yield return new WaitForSeconds(0.1f);
+
+        // Fade out over 0.15 seconds
+        float fadeTime = 0.15f;
+        float elapsedTime = 0f;
+        Color startColor = flashImage.color;
+
+        while (elapsedTime < fadeTime)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(startColor.a, 0f, elapsedTime / fadeTime);
+            flashImage.color = new Color(0f, 1f, 0f, alpha);
+            yield return null;
+        }
+
+        flashImage.gameObject.SetActive(false);
+    }
+    public IEnumerator FlashRedWithFade()
+    {
+        flashImage.gameObject.SetActive(true);
+        flashImage.color = new Color(1f, 0f, 0f, 0.5f);
 
         yield return new WaitForSeconds(0.1f);
 

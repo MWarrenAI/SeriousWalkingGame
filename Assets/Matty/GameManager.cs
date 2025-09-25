@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         public bool IsCorrect;
     }
     public string Name = "Player";
-    public string FileLocation = $"Matty/questions.csv";
+    public string FileLocation = $"";
 
     public GameObject GameView;
 
@@ -50,6 +50,25 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        string sub = PlayerPrefs.GetString("subject");
+        switch (sub) 
+        {
+            case "maths":
+                FileLocation = $"Resources/maths.csv";
+                break;
+            case "compsci":
+                FileLocation = $"Resources/compsci.csv";
+                break;
+            case "sci":
+                FileLocation = $"Resources/sci.csv";
+                break;
+            case "english":
+                FileLocation = $"Resources/english.csv";
+                break;
+            case "history":
+                FileLocation = $"Resources/history.csv";
+                break;
+        }
         M_TextObjectText = TextObject.GetComponent<TMP_Text>();
         RightText = RightObject.GetComponent<TMP_Text>();
         LeftText = LeftObject.GetComponent<TMP_Text>();
